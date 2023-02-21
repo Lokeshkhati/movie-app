@@ -1,5 +1,17 @@
+import { Movie } from "../../components/movie/Movie";
+import { useMovie } from "../../contexts/movie-context";
+
 const Watchlist = () => {
-  return <div></div>;
+  const {
+    state: { watchlist }
+  } = useMovie();
+  return (
+    <div>
+      {watchlist.map((movie) => (
+        <Movie key={movie.id} movie={movie} />
+      ))}
+    </div>
+  );
 };
 
 export { Watchlist };

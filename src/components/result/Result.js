@@ -1,5 +1,7 @@
+import { useMovie } from "../../contexts/movie-context";
 import classes from "../result/Result.module.css";
 const Result = ({ movie }) => {
+  const { addToWatchlist } = useMovie();
   return (
     <div className={classes.resultContainer}>
       {movie.backdrop_path && (
@@ -15,7 +17,12 @@ const Result = ({ movie }) => {
           <span>{movie.release_date} </span>
         </div>
         <div className={classes.btns}>
-          <button className={classes.primaryBtn}>Add to Watchlist</button>
+          <button
+            className={classes.primaryBtn}
+            onClick={() => addToWatchlist(movie)}
+          >
+            Add to Watchlist
+          </button>
           <button className={classes.secondaryBtn}>Add to Watched</button>
         </div>
       </div>
