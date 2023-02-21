@@ -20,11 +20,13 @@ const Add = () => {
   };
 
   return (
-    <div className={classes.add}>
-      <Searchbar query={query} searchHandler={searchHandler} />
-      {query &&
-        moviesData &&
-        moviesData.map((movie) => <Result key={movie.id} movie={movie} />)}
+    <div className={classes.addWrapper}>
+      <div className={classes.add}>
+        <Searchbar query={query} searchHandler={searchHandler} />
+        {query &&
+          moviesData &&
+          moviesData.map((movie) => <Result key={movie.id} movie={movie} />)}
+      </div>
     </div>
   );
 };

@@ -1,33 +1,37 @@
 .resultContainer {
-  max-width: 550px;
-  width: 90%;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 10px;
   margin: 1rem 0;
-  /* background-color: #ebebeb; */
+  background-color: #ebebeb;
   border-radius: 3px;
+  padding: 0.5rem;
 }
 
 .image {
-  height: 170px;
-  width: 150px;
-  object-fit: cover;
+  width: 35%;
+  /* object-fit: cover; */
   border-radius: 3px;
+}
+.details {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .btns {
   display: flex;
   justify-content: space-between;
-
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
+  width: 100%;
 }
 .primaryBtn {
   background-color: #000;
   color: #fff;
 }
 .secondaryBtn {
-  border: 1px solid #000;
   color: #000;
 }
 button {
@@ -35,5 +39,35 @@ button {
   cursor: pointer;
   border-radius: 3px;
   font-size: 1rem;
-  width: 180px;
+  border: 1px solid #000;
+  display: block;
+  /* min-width: 170px;
+  width: 100%; */
+}
+@media (max-width: 600) {
+  .resultContainer {
+    width: 80%;
+  }
+  /* button {
+    width: 100%;
+  } */
+  .image {
+    height: 200px;
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .image {
+    width: 100%;
+  }
+  .details {
+    width: 100%;
+  }
+  .btns {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  button {
+    width: 100%;
+  }
 }

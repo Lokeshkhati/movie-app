@@ -9,9 +9,11 @@ const Result = ({ movie }) => {
           alt=""
         />
       )}
-      <div>
-        <h4>{movie.title} </h4>
-        <h5>{movie.release_date} </h5>
+      <div className={classes.details}>
+        <div>
+          <p>{movie.title} </p>
+          <span>{movie.release_date} </span>
+        </div>
         <div className={classes.btns}>
           <button className={classes.primaryBtn}>Add to Watchlist</button>
           <button className={classes.secondaryBtn}>Add to Watched</button>
