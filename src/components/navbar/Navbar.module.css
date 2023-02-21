@@ -7,7 +7,6 @@
   justify-content: space-between;
   flex-flow: row nowrap;
   background-color: #ebebeb;
-  /* box-shadow: 0px 1px 5px grey; */
 }
 .navbar {
   display: flex;
@@ -16,7 +15,7 @@
 
 .navbar a {
   flex-grow: 1;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: black;
   padding: 5px;
 }
