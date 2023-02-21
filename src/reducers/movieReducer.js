@@ -2,6 +2,9 @@ const initialState = {
   watchlist: [],
   watched: []
 };
+const storedData = (initialState) =>
+  JSON.parse(localStorage.getItem("movies")) || initialState;
+
 const movieReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_WATCHLIST":
@@ -22,4 +25,4 @@ const movieReducer = (state, action) => {
   }
 };
 
-export { initialState, movieReducer };
+export { initialState, movieReducer, storedData };
