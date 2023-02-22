@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Loader } from "../../components/loader/Loader";
 import { Result } from "../../components/result/Result";
 import { Searchbar } from "../../components/searchbar/Searchbar";
 import classes from "../add/Add.module.css";
@@ -34,7 +35,7 @@ const Add = () => {
     <div className={classes.addWrapper}>
       <div className={classes.add}>
         <Searchbar query={query} searchHandler={searchHandler} />
-        {loading && <h1>Loading ...</h1>}
+        {loading && <Loader />}
         {error && <h1>{error}</h1>}
         {query &&
           moviesData &&
