@@ -12,10 +12,21 @@
   display: flex;
   gap: 30px;
 }
-
 .navbar a {
   flex-grow: 1;
   font-size: 1rem;
   color: black;
   padding: 5px;
+}
+.logo {
+  color: #7600dc;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.btn {
+  background: #7600dc;
+  color: #fff;
+  padding: 0 1rem;
+  display: block;
 }

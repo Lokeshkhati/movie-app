@@ -1,4 +1,11 @@
-.movieContainerimg {
+.movieContainer {
   background-color: #ebebeb;
-  height: 15rem;
+  width: 15rem;
+  padding: 1rem;
+  border-radius: 3px;
+}
+.movieContainer img {
+  height: 100%;
+  /* width: 300px; */
+  border-radius: 3px;
 }

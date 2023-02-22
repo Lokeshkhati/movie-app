@@ -7,11 +7,17 @@ const Watchlist = () => {
     state: { watchlist }
   } = useMovie();
   return (
-    <div className={classes.watchlist}>
-      {watchlist.map((movie) => (
-        <Movie key={movie.id} movie={movie} />
-      ))}
-    </div>
+    <>
+      <div>
+        <h1> My WatchList </h1>
+        <h1> {watchlist.length} </h1>
+      </div>
+      <div className={classes.watchlist}>
+        {watchlist.map((movie) => (
+          <Movie key={movie.id} movie={movie} />
+        ))}
+      </div>
+    </>
   );
 };
 
