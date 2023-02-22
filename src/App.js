@@ -6,11 +6,16 @@ import { Add } from "./pages/add/Add";
 import { Watched } from "./pages/watched/Watched";
 import { useSnackbar } from "./contexts/snackbar-context";
 import Snackbar from "./components/snackbar/Snackbar";
+import { useTheme } from "./contexts/theme-context";
 
 const App = () => {
   const { message } = useSnackbar();
+  const { theme } = useTheme();
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{ backgroundColor: theme === "light" ? "white" : "black" }}
+    >
       <Navbar />
       {message && <Snackbar />}
       <Routes>
