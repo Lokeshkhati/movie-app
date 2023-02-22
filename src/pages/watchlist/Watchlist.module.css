@@ -1,7 +1,12 @@
+.watchlistContainer {
+  /* height: 100%; */
+  /* height: calc(100vh-4rem); */
+}
 .watchlist {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   margin-top: 2rem;
+  height: 100%;
 }

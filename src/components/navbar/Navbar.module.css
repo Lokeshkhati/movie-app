@@ -6,7 +6,15 @@
   align-items: center;
   justify-content: space-between;
   flex-flow: row nowrap;
-  background-color: #ebebeb;
+  /* background-color: #ebebeb; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+}
+.light {
+}
+.dark {
+  background-color: red;
+  /* background-color: #1b202d; */
+  color: white;
 }
 .navbar {
   display: flex;
@@ -23,7 +31,6 @@
   font-size: 1.3rem;
   font-weight: 600;
 }
-
 .btn {
   background: #7600dc;
   color: #fff;

@@ -7,7 +7,7 @@ const Watchlist = () => {
     state: { watchlist }
   } = useMovie();
   return (
-    <>
+    <div className={classes.watchlistContainer}>
       <div>
         <h1> My WatchList </h1>
         <h1> {watchlist.length} </h1>
@@ -17,7 +17,7 @@ const Watchlist = () => {
           <Movie key={movie.id} movie={movie} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

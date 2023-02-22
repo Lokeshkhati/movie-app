@@ -1,5 +1,4 @@
 import { Navbar } from "./components/navbar/Navbar";
-import "./styles.css";
 import { Routes, Route } from "react-router-dom";
 import { Watchlist } from "./pages/watchlist/Watchlist";
 import { Add } from "./pages/add/Add";
@@ -7,15 +6,14 @@ import { Watched } from "./pages/watched/Watched";
 import { useSnackbar } from "./contexts/snackbar-context";
 import Snackbar from "./components/snackbar/Snackbar";
 import { useTheme } from "./contexts/theme-context";
+import "./styles.css";
 
 const App = () => {
   const { message } = useSnackbar();
   const { theme } = useTheme();
+  console.log(theme);
   return (
-    <div
-      className="App"
-      style={{ backgroundColor: theme === "light" ? "white" : "black" }}
-    >
+    <div className={`app ${theme === "light" ? "dark" : "light"}`}>
       <Navbar />
       {message && <Snackbar />}
       <Routes>

@@ -12,7 +12,13 @@ body {
 a {
   text-decoration: none;
 }
-
+.app {
+  height: 100vh;
+}
+.dark {
+  background-color: #1b202d;
+  color: white;
+}
 @media (max-width: 600) {
   html {
     font-size: 14px;
