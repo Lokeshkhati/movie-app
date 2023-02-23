@@ -1,11 +1,13 @@
 import { Movie } from "../../components/movie/Movie";
 import { useMovie } from "../../contexts/movie-context";
+import { useTitle } from "../../hooks/useTitle";
 import classes from "../watchlist/Watchlist.module.css";
 
 const Watchlist = () => {
   const {
     state: { watchlist }
   } = useMovie();
+  useTitle("HDMovies | Watchlist");
   return (
     <div className={classes.watchlistContainer}>
       <div>

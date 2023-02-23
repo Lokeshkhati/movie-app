@@ -1,5 +1,6 @@
 import { Movie } from "../../components/movie/Movie";
 import { useMovie } from "../../contexts/movie-context";
+import { useTitle } from "../../hooks/useTitle";
 
 import classes from "../watched/Watched.module.css";
 
@@ -8,6 +9,8 @@ const Watched = () => {
     state: { watched }
   } = useMovie();
   console.log(watched);
+
+  useTitle("HDMovies | Watched");
 
   return (
     <>
