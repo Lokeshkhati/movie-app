@@ -11,7 +11,6 @@ import "./styles.css";
 const App = () => {
   const { message } = useSnackbar();
   const { theme } = useTheme();
-  console.log(theme);
   return (
     <div className={`app ${theme === "light" ? "dark" : "light"}`}>
       <Navbar />
